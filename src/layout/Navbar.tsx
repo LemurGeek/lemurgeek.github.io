@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+
 import "./navbar.scss";
 
 const Navbar = () => {
@@ -7,32 +9,44 @@ const Navbar = () => {
   return (
     <nav className="flex flex-row justify-between pt-6 px-6 lg:px-12 items-baseline w-full">
       <div>
-        <a
-          href="/home"
+        <NavLink
+          to={"/"}
           className="lg:text-2xl font-black no-underline text-eerie_black"
         >
           MARCELLO CALVO
-        </a>
+        </NavLink>
       </div>
       <div className="DESKTOP-MENU hidden lg:flex flex-row justify-evenly lg:gap-x-12">
-        <a
-          href="/about"
-          className="lg:text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+        <NavLink
+          to={"/about"}
+          className={({ isActive }) =>
+            isActive
+              ? "lg:text-xl font-black no-underline text-ochre_orange "
+              : "lg:text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+          }
         >
           About
-        </a>
-        <a
-          href="/work"
-          className="lg:text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+        </NavLink>
+        <NavLink
+          to={"/work"}
+          className={({ isActive }) =>
+            isActive
+              ? "lg:text-xl font-black no-underline text-ochre_orange "
+              : "lg:text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+          }
         >
           Work
-        </a>
-        <a
-          href="/contact"
-          className="lg:text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+        </NavLink>
+        <NavLink
+          to={"/contact"}
+          className={({ isActive }) =>
+            isActive
+              ? "lg:text-xl font-black no-underline text-ochre_orange "
+              : "lg:text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+          }
         >
           Contact
-        </a>
+        </NavLink>
       </div>
 
       <section className="MOBILE-MENU flex lg:hidden">
@@ -64,14 +78,41 @@ const Navbar = () => {
             </svg>
           </div>
           <ul className="flex flex-col items-center justify-between min-h-[250px]">
-            <li className="text-xl font-black no-underline text-eerie_black hover:text-ochre_orange">
-              <a href="/about">About</a>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-xl font-black no-underline text-ochre_orange"
+                    : "text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+                }
+                to={"/about"}
+              >
+                About
+              </NavLink>
             </li>
-            <li className="text-xl font-black no-underline text-eerie_black hover:text-ochre_orange">
-              <a href="/portfolio">Work</a>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-xl font-black no-underline text-ochre_orange"
+                    : "text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+                }
+                to={"/work"}
+              >
+                Work
+              </NavLink>
             </li>
-            <li className="text-xl font-black no-underline text-eerie_black hover:text-ochre_orange">
-              <a href="/contact">Contact</a>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-xl font-black no-underline text-ochre_orange"
+                    : "text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
+                }
+                to={"/contact"}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </div>

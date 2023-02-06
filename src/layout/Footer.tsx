@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   IoMdFlower,
   IoLogoLinkedin,
@@ -12,9 +13,9 @@ const Footer = () => {
         <span className="text-xs lg:text-base">© 2023 Marcello Calvo</span>
       </div>
       <div className="flex justify-center self-center basis-1/3">
-        <a href="/home">
+        <Link to={"/"}>
           <IoMdFlower className="text-3xl" />
-        </a>
+        </Link>
       </div>
       <div className="flex flex-row justify-end gap-x-5 basis-1/3">
         <a className="hidden lg:flex" href="mailto:mchellocz@gmail.com">

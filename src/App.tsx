@@ -1,16 +1,15 @@
-import "./App.css";
 import Footer from "./layout/Footer";
 import Navbar from "./layout/Navbar";
-import Home from "./components/Home";
+import { Outlet } from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div className="App bg-pearl_bush">
+    <div className="bg-pearl_bush">
       <Navbar />
-      <Home />
+      <Outlet />
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
