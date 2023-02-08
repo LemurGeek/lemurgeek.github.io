@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
-    <div className="bg-pearl_bush">
+    <div className="flex flex-col min-h-screen bg-pearl_bush">
       <Navbar />
       <Outlet />
       <Footer />

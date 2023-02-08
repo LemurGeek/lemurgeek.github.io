@@ -17,7 +17,7 @@ const Footer = () => {
           <IoMdFlower className="text-3xl" />
         </Link>
       </div>
-      <div className="flex flex-row justify-end gap-x-5 basis-1/3">
+      <div className="flex flex-row justify-end gap-x-5 basis-1/3 text-pearl_bush">
         <a className="hidden lg:flex" href="mailto:mchellocz@gmail.com">
           mchellocz@gmail.com
         </a>

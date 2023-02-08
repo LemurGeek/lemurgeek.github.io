@@ -11,7 +11,7 @@ const ErrorPage = () => {
   return (
     <section
       id="error-page"
-      className="flex flex-col justify-center h-screen bg-pearl_bush"
+      className="flex flex-col flex-grow justify-center h-screen bg-pearl_bush"
     >
       <div className="text-center">
         <h1 className="text-5xl lg:text-9xl text-rock_blue">OOPS!</h1>
@@ -23,7 +23,7 @@ const ErrorPage = () => {
         </p>
         <button
           onClick={goBack}
-          className="text-lg lg:text-xl font-thin px-10 py-1 border-ochre_orange border-2 rounded-full hover:bg-ochre_orange hover:text-pearl_bush"
+          className="text-lg lg:text-xl font-light px-10 py-1 border-ochre_orange border-2 rounded-full hover:bg-ochre_orange hover:text-pearl_bush"
         >
           Go back
         </button>
