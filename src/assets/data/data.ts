@@ -46,11 +46,100 @@ export const workData = [
         id: 0,
         position: "Web Developer Senior",
         description:
-          "Full development and design of a mobile application with Ionic 5, a coffee cupping system that allows the organization to have a better solution and efficiency for the manual cupping process.",
+          "Front-end developers build the user interface of websites and cloud software applications. They take care of the look, feel, and function of the user-facing side of applications, making them visually appealing and user friendly. People with a strong desire to learn a multitude of technologies with a can-do attitude will thrive in this role.",
         logo: "accenture.png",
         startDate: "September 2021",
         endDate: "present",
       },
     ],
+  },
+];
+
+
+export const skillsData = [
+  {
+    id: 0,
+    name: "Angular",
+    img: "angular.png",
+  },
+  {
+    id: 1,
+    name: "NodeJS",
+    img: "node.png",
+  },
+  {
+    id: 2,
+    name: "Typescript",
+    img: "typescript.png",
+  },
+  {
+    id: 3,
+    name: "Javascript",
+    img: "javascript.png",
+  },
+  {
+    id: 4,
+    name: "Loopback",
+    img: "loopback.png",
+  },
+  {
+    id: 5,
+    name: "Ionic",
+    img: "ionic.png",
+  },
+  {
+    id: 6,
+    name: "SASS",
+    img: "sass.png",
+  },
+  {
+    id: 7,
+    name: "Bootstrap",
+    img: "bootstrap.png",
+  },
+  {
+    id: 8,
+    name: "Figma",
+    img: "figma.png",
+  },
+  {
+    id: 9,
+    name: "MySQL",
+    img: "mysql.png",
+  },
+  {
+    id: 10,
+    name: "MongoDB",
+    img: "mongo.png",
+  },
+  {
+    id: 11,
+    name: "Git",
+    img: "git.png",
+  },
+  {
+    id: 12,
+    name: "Linux",
+    img: "linux.png",
+  },
+  {
+    id: 13,
+    name: "React",
+    img: "react.png",
+  },
+  {
+    id: 14,
+    name: "Tailwind",
+    img: "tailwind.png",
+  },
+  {
+    id: 15,
+    name: "Vite",
+    img: "vite.png",
+  },
+  {
+    id: 16,
+    name: "Ionic",
+    img: "ionic.png",
   },
 ];

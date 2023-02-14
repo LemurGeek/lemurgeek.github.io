@@ -1,9 +1,12 @@
 import React from "react";
 import lemur from "../assets/img/lemur.png";
+import { skillsData } from "../assets/data/data";
+import { ISkill } from "../shared/interfaces/skills.interface";
 
 const About: React.FC = () => {
+  const [skills, setSkills] = React.useState<Array<ISkill>>(skillsData);
   return (
-    <section className="flex flex-col flex-grow my-28 lg:my-36 px-8 lg:px-64">
+    <section className="flex flex-col flex-grow my-28 lg:my-36 px-8 lg:px-64 text-eerie_black">
       <div className="flex justify-center">
         <img
           src={lemur}
@@ -36,6 +39,28 @@ const About: React.FC = () => {
           services with Node and Loopback 3 as framework, nevertheless I’m
           always open to learn new technologies and knowledge to improve my
           skills.
+        </p>
+      </div>
+      <div className="grid grid-cols-3 lg:grid-cols-6 justify-center my-12 gap-16 lg:gap-24">
+        {skills.map((s) => (
+          <div
+            key={s.id}
+            className="flex flex-col justify-center text-center gap-y-5 w-16 h-16 lg:w-32 lg:h-32"
+          >
+            <img
+              src={`/src/assets/img/skills/${s.img}`}
+              alt=""
+              className="w-fit h-fit"
+            />
+            <span>{s.name}</span>
+          </div>
+        ))}
+      </div>
+      <div className="lg:text-2xl font-light my-7">
+        <p className="py-10">
+          These are mainly my skill set, at least those are my currently focus.
+          Also, I have a bit of knowledge of Oracle, Java, Python, C, C++, C#,
+          PHP and others. But I’m a little rusty on those.
         </p>
       </div>
       <div className="flex justify-center">
