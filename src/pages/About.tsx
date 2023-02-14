@@ -1,13 +1,14 @@
+import React from "react";
 import lemur from "../assets/img/lemur.png";
 
-const About = () => {
+const About: React.FC = () => {
   return (
     <section className="flex flex-col flex-grow my-28 lg:my-36 px-8 lg:px-64">
       <div className="flex justify-center">
         <img
           src={lemur}
           alt=""
-          className="absolute top-32 lg:top-36 left-40 lg:left-[47.5%] rounded-full w-32 lg:w-64 h-auto"
+          className="absolute top-32 lg:top-36 left-40 md:left-[23rem] lg:left-[47.5%] rounded-full w-32 lg:w-64 h-auto"
         />
         <h1 className="relative text-5xl lg:text-9xl text-rock_blue mb-12 lg:mb-24">
           <span className="absolute -left-6 lg:static">ABOUT</span>{" "}

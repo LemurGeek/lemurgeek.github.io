@@ -1,8 +1,10 @@
-const Work = () => {
+import React from "react";
+
+const Contact: React.FC = () => {
   return (
-    <section className="flex flex-col flex-grow my-28 lg:my-36">
+    <section className="flex flex-col flex-grow justify-center my-28 lg:my-36">
       <div className="text-center">
-        <h1 className="text-5xl lg:text-9xl text-rock_blue">WORK</h1>
+        <h1 className="text-5xl lg:text-9xl text-rock_blue">CONTACT</h1>
         <h2 className="text-xl lg:text-3xl font-light italic my-10">
           Interested in working together? Do not hesitate to contact me
         </h2>
@@ -40,4 +42,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Contact;

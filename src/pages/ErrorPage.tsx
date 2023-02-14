@@ -1,6 +1,7 @@
+import React from "react";
 import { useNavigate, useRouteError } from "react-router-dom";
 
-const ErrorPage = () => {
+const ErrorPage: React.FC = () => {
   const error = useRouteError() as any;
   const navigate = useNavigate();
 

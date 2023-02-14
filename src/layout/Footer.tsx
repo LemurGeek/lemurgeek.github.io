@@ -6,7 +6,7 @@ import {
   IoMdMail,
 } from "react-icons/io";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <footer className="flex flex-row justify-between py-6 px-12 items-baseline text-center bg-eerie_black text-pearl_bush">
       <div className="flex justify-start basis-1/3">

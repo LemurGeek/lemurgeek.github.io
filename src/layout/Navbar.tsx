@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 import "./navbar.scss";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
