@@ -1,12 +1,21 @@
 import React from "react";
+
 import lemur from "../assets/img/lemur.png";
 import { skillsData } from "../assets/data/data";
 import { ISkill } from "../shared/interfaces/skills.interface";
 
 const About: React.FC = () => {
   const [skills, setSkills] = React.useState<Array<ISkill>>(skillsData);
+
+  const openCV = () => {
+    window.open(
+      "https://drive.google.com/file/d/1aKMerTWIsPkE647FZrrYU-MYoum3q7pA/view?usp=sharing",
+      "_blank"
+    );
+  };
+
   return (
-    <section className="flex flex-col flex-grow my-28 lg:my-36 px-8 lg:px-64 text-eerie_black">
+    <section className="flex flex-col flex-grow my-28 lg:my-36 px-8 lg:px-72 text-eerie_black">
       <div className="flex justify-center">
         <img
           src={lemur}
@@ -41,18 +50,18 @@ const About: React.FC = () => {
           skills.
         </p>
       </div>
-      <div className="grid grid-cols-3 lg:grid-cols-6 justify-center my-12 gap-16 lg:gap-24">
+      <div className="grid grid-cols-3 lg:grid-cols-6 justify-center my-10 gap-16 lg:gap-24">
         {skills.map((s) => (
           <div
             key={s.id}
-            className="flex flex-col justify-center text-center gap-y-5 w-16 h-16 lg:w-32 lg:h-32"
+            className="flex flex-col justify-center text-center gap-y-5 w-16 h-16 lg:w-24 lg:h-24"
           >
             <img
               src={`/src/assets/img/skills/${s.img}`}
               alt=""
               className="w-fit h-fit"
             />
-            <span>{s.name}</span>
+            <span className="lg:text-2xl font-light">{s.name}</span>
           </div>
         ))}
       </div>
@@ -64,7 +73,10 @@ const About: React.FC = () => {
         </p>
       </div>
       <div className="flex justify-center">
-        <button className="text-lg lg:text-xl font-light px-10 py-1 border-ochre_orange border-2 rounded-full hover:bg-ochre_orange hover:text-pearl_bush">
+        <button
+          onClick={openCV}
+          className="text-lg lg:text-xl font-light px-10 py-1 border-ochre_orange border-2 rounded-full hover:bg-ochre_orange hover:text-pearl_bush"
+        >
           Resume/CV
         </button>
       </div>

@@ -7,7 +7,7 @@ const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   return (
-    <nav className="flex flex-row justify-between pt-6 px-6 lg:px-12 items-baseline w-full">
+    <nav className="flex flex-row justify-between pt-6 px-6 lg:px-12 items-baseline w-full z-20">
       <div>
         <NavLink
           to={"/"}

@@ -10,6 +10,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
+
   h1 {
     font-family: Beer Googles, serif;
   }
@@ -36,5 +40,10 @@
   html::-webkit-scrollbar-thumb:active {
     background: rgb(68, 68, 68);
     border-radius: 10px;
+  }
+
+  .text-border {
+    text-shadow: -5px -5px 0 #eee7e1, 5px -5px 0 #eee7e1, -5px 5px 0 #eee7e1,
+      5px 5px 0 #eee7e1;
   }
 }

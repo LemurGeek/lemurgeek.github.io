@@ -46,9 +46,9 @@ export const workData = [
         id: 0,
         position: "Web Developer Senior",
         description:
-          "Front-end developers build the user interface of websites and cloud software applications. They take care of the look, feel, and function of the user-facing side of applications, making them visually appealing and user friendly. People with a strong desire to learn a multitude of technologies with a can-do attitude will thrive in this role.",
+          "Create and manage web pages, edit content and upload or remove documents. Program codes that dictate web page elements for positioning, styling and sizing information. Turn designs into working browser based web pages. Develop and implement testing plans. Execute website decommissioning processes.",
         logo: "accenture.png",
-        startDate: "September 2021",
+        startDate: "October 2022",
         endDate: "present",
       },
     ],
