@@ -15,11 +15,7 @@ const WorkCard: React.FC<IProps> = (props) => {
         <div key={p.id} className="flex flex-row gap-x-5 lg:w-[52rem]">
           <div className="relative flex flex-col ">
             <div className="w-8 h-8 lg:w-16 lg:h-16">
-              <img
-                src={`/src/assets/img/work/${p.logo}`}
-                alt=""
-                className="w-fit h-fit"
-              />
+              <img src={`/work/${p.logo}`} alt="" className="w-fit h-fit" />
             </div>
             <div className="absolute left-1/2 top-20 -ml-0.5 w-0.5 min-h-[calc(100%-5rem)] bg-eerie_black"></div>
           </div>

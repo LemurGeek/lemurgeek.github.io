@@ -8,10 +8,7 @@ const About: React.FC = () => {
   const [skills, setSkills] = React.useState<Array<ISkill>>(skillsData);
 
   const openCV = () => {
-    window.open(
-      "https://drive.google.com/file/d/1aKMerTWIsPkE647FZrrYU-MYoum3q7pA/view?usp=sharing",
-      "_blank"
-    );
+    window.open("/Marcello_Calvo_Resume_CV.pdf", "_blank");
   };
 
   return (
@@ -56,11 +53,7 @@ const About: React.FC = () => {
             key={s.id}
             className="flex flex-col justify-center text-center gap-y-5 w-16 h-16 lg:w-24 lg:h-24"
           >
-            <img
-              src={`/src/assets/img/skills/${s.img}`}
-              alt=""
-              className="w-fit h-fit"
-            />
+            <img src={`/skills/${s.img}`} alt="" className="w-fit h-fit" />
             <span className="lg:text-2xl font-light">{s.name}</span>
           </div>
         ))}
