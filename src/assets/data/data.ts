@@ -34,7 +34,7 @@ export const workData = [
           "Full development and design of a mobile application with Ionic 5, a coffee cupping system that allows the organization to have a better solution and efficiency for the manual cupping process.",
         logo: "tributos.png",
         startDate: "September 2021",
-        endDate: "Augost 2022",
+        endDate: "August 2022",
       },
     ],
   },
