@@ -9,8 +9,8 @@ export const workData = [
         description:
           "Development of an inside system, a web accessibility evaluator that checks and reviews the accessibility of a website, or a group of websites with a cluster. Full process development of the app, collaborated along with a design team and scrum team.",
         logo: "inclutec.png",
-        startDate: "July 2019",
-        endDate: "September 2022",
+        startDate: "March 2019",
+        endDate: "June 2019",
       },
       {
         id: 1,
