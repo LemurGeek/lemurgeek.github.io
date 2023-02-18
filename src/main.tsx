@@ -7,7 +7,7 @@ import App from "./App";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Work from "./pages/Work";
+import Work from "./pages/Work/Work";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
 

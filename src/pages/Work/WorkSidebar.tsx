@@ -1,5 +1,5 @@
 import React from "react";
-import { IWork } from "../shared/interfaces/work.interface";
+import { IWork } from "../../shared/interfaces/work.interface";
 
 interface IProps {
   workList: IWork[];

@@ -1,10 +1,12 @@
 import React from "react";
 import Sketch from "react-p5";
 import p5Types from "p5"; //Import this for typechecking and intellisense
+import { random } from "gsap";
 
 const colors = ["#256088", "#7099ba", "#9cc7cf", "#bed2a7", "#dddfc5"];
-const corals: any = [];
+let corals: any = [];
 let maxCorals: number;
+let firstTime: boolean = false;
 
 const CoralSketch: React.FC = () => {
   const setup = (p5: p5Types, canvasParentRef: Element) => {
@@ -12,28 +14,38 @@ const CoralSketch: React.FC = () => {
       .createCanvas(p5.windowWidth, p5.windowHeight)
       .parent(canvasParentRef);
     canvas.position(0, 0);
-
-    console.log(p5.windowWidth);
-    maxCorals = p5.windowWidth >= 500 ? p5.random(5) : p5.random(2);
+    startGeneration(p5);
   };
 
   const draw = (p5: p5Types) => {
-    startGeneration(p5);
+    drawGeneration(p5);
   };
 
   const windowResized = (p5: p5Types) => {
     p5.resizeCanvas(p5.windowWidth, p5.windowHeight);
+    startGeneration(p5);
   };
 
-  const startGeneration = (p5: p5Types) => {
+  const startGeneration = async (p5: p5Types) => {
+    p5.clear();
+    corals = [];
+    if (!firstTime) await sleep(2500);
+    firstTime = true;
+    maxCorals = p5.windowWidth >= 500 ? p5.random(5) : p5.random(2);
     for (let i = 0; i <= maxCorals; i++) {
       corals.push(new Coral(p5));
     }
+  };
 
+  const drawGeneration = (p5: p5Types) => {
     for (let j = 0; j <= maxCorals; j++) {
       corals[j].show(p5);
       corals[j].update(p5);
     }
+  };
+
+  const sleep = (millis: number) => {
+    return new Promise((resolve) => setTimeout(resolve, millis));
   };
 
   return (

@@ -1,6 +1,6 @@
 import React from "react";
-import { workData } from "../assets/data/data";
-import { IWork } from "../shared/interfaces/work.interface";
+import { workData } from "../../assets/data/data";
+import { IWork } from "../../shared/interfaces/work.interface";
 
 import WorkCard from "./WorkCard";
 import WorkSidebar from "./WorkSidebar";

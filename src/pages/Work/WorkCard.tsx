@@ -1,5 +1,5 @@
 import React from "react";
-import { IPositions } from "../shared/interfaces/work.interface";
+import { IPositions } from "../../shared/interfaces/work.interface";
 
 import iconPath from "/src/assets/img/work/inclutec.png";
 

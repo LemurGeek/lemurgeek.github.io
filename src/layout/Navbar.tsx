@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
           to={"/"}
           className="lg:text-2xl font-black no-underline text-eerie_black"
         >
-          MARCELLO CALVO
+          MARCELLO CALVO.
         </NavLink>
       </div>
       <div className="DESKTOP-MENU hidden lg:flex flex-row justify-evenly lg:gap-x-12">
@@ -86,6 +86,7 @@ const Navbar: React.FC = () => {
                     : "text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
                 }
                 to={"/about"}
+                onClick={() => setIsNavOpen((prev) => !prev)}
               >
                 About
               </NavLink>
@@ -98,6 +99,7 @@ const Navbar: React.FC = () => {
                     : "text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
                 }
                 to={"/work"}
+                onClick={() => setIsNavOpen((prev) => !prev)}
               >
                 Work
               </NavLink>
@@ -110,6 +112,7 @@ const Navbar: React.FC = () => {
                     : "text-xl font-black no-underline text-eerie_black hover:text-ochre_orange"
                 }
                 to={"/contact"}
+                onClick={() => setIsNavOpen((prev) => !prev)}
               >
                 Contact
               </NavLink>
