@@ -1,6 +1,6 @@
 import React from "react";
 import Sketch from "react-p5";
-import p5Types from "p5"; //Import this for typechecking and intellisense
+import p5Types from "p5";
 import { random } from "gsap";
 
 const colors = ["#256088", "#7099ba", "#9cc7cf", "#bed2a7", "#dddfc5"];
