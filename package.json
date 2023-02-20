@@ -1,6 +1,7 @@
 {
   "name": "chello-portfolio",
   "private": true,
+  "homepage": "https://lemurgeek.github.io/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

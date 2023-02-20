@@ -11,9 +11,9 @@ const Home: React.FC = () => {
     navigate("/about");
   };
 
-  let titleItem = useRef<HTMLHeadingElement | null>(null);
-  let subtitleItem = useRef<HTMLDivElement | null>(null);
-  let buttonItem = useRef<HTMLButtonElement | null>(null);
+  const titleItem = useRef<HTMLHeadingElement | null>(null);
+  const subtitleItem = useRef<HTMLDivElement | null>(null);
+  const buttonItem = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     gsap.fromTo(

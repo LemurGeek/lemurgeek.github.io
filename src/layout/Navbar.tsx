@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useState } from "react";
+
 import { NavLink } from "react-router-dom";
 
 import "./navbar.scss";
@@ -13,7 +14,7 @@ const Navbar: React.FC = () => {
           to={"/"}
           className="lg:text-2xl font-black no-underline text-eerie_black"
         >
-          MARCELLO CALVO.
+          MARCELLO CALVO
         </NavLink>
       </div>
       <div className="DESKTOP-MENU hidden lg:flex flex-row justify-evenly lg:gap-x-12">

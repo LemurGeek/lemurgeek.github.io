@@ -1,7 +1,6 @@
-import React from "react";
+import React, { createRef, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { IPositions } from "../../shared/interfaces/work.interface";
-
-import iconPath from "/src/assets/img/work/inclutec.png";
 
 interface IProps {
   positions: IPositions[];
@@ -9,10 +8,29 @@ interface IProps {
 }
 
 const WorkCard: React.FC<IProps> = (props) => {
+  const workCardsRef = useRef(
+    props.positions.map(() => createRef<HTMLDivElement>())
+  );
+
+  //TODO: add positions to effect array to listen when it change and fix animation issue.
+  useEffect(() => {
+    workCardsRef.current.map((workCard) => {
+      gsap.fromTo(
+        workCard.current,
+        { opacity: 0, x: 500 },
+        { opacity: 1, delay: 0.5, x: 0, ease: "circ.out", duration: 1.5 }
+      );
+    });
+  }, []);
+
   return (
     <div className="flex flex-col-reverse gap-y-5">
       {props.positions.map((p) => (
-        <div key={p.id} className="flex flex-row gap-x-5 lg:w-[52rem]">
+        <div
+          ref={workCardsRef.current[p.id]}
+          key={p.id}
+          className="flex flex-row gap-x-5 lg:w-[52rem]"
+        >
           <div className="relative flex flex-col ">
             <div className="w-8 h-8 lg:w-16 lg:h-16">
               <img src={`/work/${p.logo}`} alt="" className="w-fit h-fit" />

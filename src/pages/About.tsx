@@ -12,11 +12,11 @@ const About: React.FC = () => {
     window.open("/Marcello_Calvo_Resume_CV.pdf", "_blank");
   };
 
-  let titleItem = useRef<HTMLHeadingElement | null>(null);
-  let lemurItem = useRef<HTMLImageElement | null>(null);
-  let pAboutItem = useRef<HTMLDivElement | null>(null);
-  let skillsTitleItem = useRef<HTMLHeadingElement | null>(null);
-  let skillsItem = useRef<HTMLDivElement | null>(null);
+  const titleItem = useRef<HTMLHeadingElement | null>(null);
+  const lemurItem = useRef<HTMLImageElement | null>(null);
+  const pAboutItem = useRef<HTMLDivElement | null>(null);
+  const skillsTitleItem = useRef<HTMLHeadingElement | null>(null);
+  const skillsItem = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -35,7 +35,7 @@ const About: React.FC = () => {
       { opacity: -3 },
       {
         opacity: 1,
-        ease: "sine.out",
+        ease: "slow",
         duration: 1,
       }
     );

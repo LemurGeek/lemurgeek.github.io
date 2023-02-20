@@ -1,4 +1,5 @@
-import React from "react";
+import React, { createRef, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import { IWork } from "../../shared/interfaces/work.interface";
 
 interface IProps {
@@ -7,10 +8,22 @@ interface IProps {
 }
 
 const WorkSidebar: React.FC<IProps> = (props) => {
+  const worksRef = useRef(props.workList.map(() => createRef<HTMLLIElement>()));
+
+  useEffect(() => {
+    worksRef.current.map((workRef) => {
+      gsap.fromTo(
+        workRef.current,
+        { opacity: 0, x: -500 },
+        { opacity: 1, delay: 0.5, x: 0, ease: "circ.out", duration: 1.5 }
+      );
+    });
+  }, []);
+
   return (
     <ul className="flex flex-col-reverse text-left gap-y-4">
       {props.workList.map((w) => (
-        <li key={w.id}>
+        <li ref={worksRef.current[w.id]} key={w.id}>
           <input
             type="radio"
             id="rdWork"
