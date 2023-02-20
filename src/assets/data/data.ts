@@ -139,7 +139,7 @@ export const skillsData = [
   },
   {
     id: 16,
-    name: "Ionic",
-    img: "ionic.png",
+    name: "GSAP",
+    img: "gsap.png",
   },
 ];
